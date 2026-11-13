@@ -1,6 +1,6 @@
 # n8n-nodes-keycloak
 
-[![npm version](https://img.shields.io/npm/v/@nonagentic/n8n-nodes-keycloak.svg)](https://www.npmjs.com/package/@nonagentic/n8n-nodes-keycloak)
+[![npm version](https://img.shields.io/npm/v/@nonagenticai/n8n-nodes-keycloak.svg)](https://www.npmjs.com/package/@nonagenticai/n8n-nodes-keycloak)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![CI](https://github.com/nonagenticai/n8n-nodes-keycloak/actions/workflows/ci.yml/badge.svg)](https://github.com/nonagenticai/n8n-nodes-keycloak/actions/workflows/ci.yml)
 [![Release](https://img.shields.io/github/v/release/nonagenticai/n8n-nodes-keycloak)](https://github.com/nonagenticai/n8n-nodes-keycloak/releases)
@@ -23,12 +23,12 @@ OAuth tokens.
 ### n8n GUI (recommended)
 
 1. Go to **Settings → Community Nodes → Install**.
-2. Enter `@nonagentic/n8n-nodes-keycloak`.
+2. Enter `@nonagenticai/n8n-nodes-keycloak`.
 
 ### Manual
 
 ```bash
-npm install @nonagentic/n8n-nodes-keycloak
+npm install @nonagenticai/n8n-nodes-keycloak
 ```
 
 Restart n8n afterwards.
