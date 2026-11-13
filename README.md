@@ -2,6 +2,8 @@
 
 [![npm version](https://img.shields.io/npm/v/@nonagentic/n8n-nodes-keycloak.svg)](https://www.npmjs.com/package/@nonagentic/n8n-nodes-keycloak)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![CI](https://github.com/nonagenticai/n8n-nodes-keycloak/actions/workflows/ci.yml/badge.svg)](https://github.com/nonagenticai/n8n-nodes-keycloak/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/nonagenticai/n8n-nodes-keycloak)](https://github.com/nonagenticai/n8n-nodes-keycloak/releases)
 
 An n8n community node for administering [Keycloak](https://www.keycloak.org): users, clients and
 OAuth tokens.
@@ -130,6 +132,16 @@ this node is validated against is vendored as
 - [Keycloak Admin REST API](https://www.keycloak.org/docs-api/latest/rest-api/index.html)
 - [Keycloak documentation](https://www.keycloak.org/documentation)
 - [n8n community nodes](https://docs.n8n.io/integrations/community-nodes/)
+
+## Security
+
+Report vulnerabilities privately through the repository's Security tab — see
+[`SECURITY.md`](SECURITY.md). Do not open a public issue for a security problem.
+
+## Contributing
+
+Issues and pull requests are welcome. See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the
+development commands and the commit conventions. Commits carry DCO sign-off.
 
 ## License
 
