@@ -1,0 +1,66 @@
+{
+  "name": "@nonagentic/n8n-nodes-keycloak",
+  "version": "0.2.0",
+  "description": "n8n node for managing users, clients and OAuth tokens in Keycloak",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "keycloak",
+    "identity",
+    "authentication",
+    "sso"
+  ],
+  "license": "Apache-2.0",
+  "homepage": "https://nonagentic.ai",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nonagenticai/n8n-nodes-keycloak.git"
+  },
+  "scripts": {
+    "build": "tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "lint": "eslint \"nodes/**/*.ts\" \"credentials/**/*.ts\"",
+    "test": "NODE_OPTIONS='--localstorage-file=/tmp/jest-localstorage' jest",
+    "test:watch": "NODE_OPTIONS='--localstorage-file=/tmp/jest-localstorage' jest --watch",
+    "test:coverage": "NODE_OPTIONS='--localstorage-file=/tmp/jest-localstorage' jest --coverage"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "replaySafe": false,
+    "credentials": [
+      "dist/credentials/KeycloakApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Keycloak/Keycloak.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^26.0.0",
+    "eslint": "^10.0.0",
+    "gulp": "^5.0.1",
+    "jest": "^30.2.0",
+    "n8n-workflow": "^1.120.7",
+    "prettier": "^3.8.1",
+    "ts-jest": "^29.4.15",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.2"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  },
+  "overrides": {
+    "form-data": "^4.0.4",
+    "isolated-vm": "7.0.2"
+  },
+  "author": {
+    "name": "NonAgenticAI",
+    "url": "https://nonagentic.ai"
+  }
+}
