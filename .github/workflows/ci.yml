@@ -1,4 +1,4 @@
-# CI for n8n-nodes-planka, a PUBLIC repository.
+# CI for n8n-nodes-keycloak, a PUBLIC repository.
 #
 # Why this file is self-contained: a public repository may only call reusable workflows that are
 # themselves public. The shared node archetype this package was built against lives in a PRIVATE
