@@ -1,6 +1,6 @@
 {
   "name": "@nonagenticai/n8n-nodes-keycloak",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "n8n node for managing users, clients and OAuth tokens in Keycloak",
   "keywords": [
     "n8n-community-node-package",
@@ -19,6 +19,8 @@
     "type": "git",
     "url": "git+https://github.com/nonagenticai/n8n-nodes-keycloak.git"
   },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc && gulp build:icons",
     "dev": "tsc --watch",
