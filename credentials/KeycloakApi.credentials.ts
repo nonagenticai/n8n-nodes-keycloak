@@ -7,6 +7,18 @@ import type {
 } from 'n8n-workflow';
 
 /**
+ * Strip every trailing '/' from a URL. Linear-time equivalent of
+ * `.replace(/\/+$/, '')`, which CodeQL flags as js/polynomial-redos: at each
+ * start position the greedy `\/+` rescans the remaining slash run before `$`
+ * fails, so a long run followed by any other character costs O(n²).
+ */
+function stripTrailingSlashes(value: string): string {
+	let end = value.length;
+	while (end > 0 && value.charCodeAt(end - 1) === 0x2f) end -= 1;
+	return value.slice(0, end);
+}
+
+/**
  * KeycloakApi Credential
  *
  * Credentials for the Keycloak Admin API and the realm token endpoint.
@@ -120,7 +132,7 @@ export class KeycloakApi implements ICredentialType {
 	 */
 	// @ts-expect-error - n8n runtime supports async test function but types declare ICredentialTestRequest
 	async test(this: ICredentialTestFunctions, credential: ICredentialDataDecryptedObject): Promise<INodeCredentialTestResult> {
-		const baseUrl = String(credential.baseUrl ?? '').replace(/\/+$/, '');
+		const baseUrl = stripTrailingSlashes(String(credential.baseUrl ?? ''));
 		const realm = credential.realm as string;
 		const sslOptions = (credential.sslOptions ?? {}) as { ignoreSSL?: boolean };
 		const rejectUnauthorized = !(credential.ignoreSSL || sslOptions.ignoreSSL);
